@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+		<title>HTML中嵌入JS代码的第三种方式，引入外部独立的技术</title>
+	</head>
+	<body>
+
+		<!-- 在需要的位置引入js脚本文件 -->
+		<script type="text/javascript" src="js/1.js"></script>
+		<!--  同一个js可以被引入多次-->
+		<script type="text/javascript" src="js/1.js"></script>
+
+		<!-- 这种方式是错误的 -->
+		<!-- <script type="text/javascript" src="js/1.js" /> -->
+
+		<!-- 里面写的代码不能被执行  -->
+		<script type="text/javascript" src="js/1.js">
+		window.alert("不会被执行")
+		</script>
+
+		<!-- 会被执行 -->
+	<script type="text/javascript">
+	window.alert("会被执行")
+	</script>
+
+
+	</body>
+</html>

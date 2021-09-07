@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JS函数初步</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// JS中的函数，等于java中的方法，函数也是一段可以被重复使用的代码片段
+		// 函数一般都是可以完成某个特定的功能的。
+		// JS中的变量是弱类型，函数定义
+		// 第一种JS中的函数的返回值类型，不需要指定，返回什么类型都行
+		// function：函数名(形式参数列表){
+		// 函数体
+		// }
+		// 第二种方式
+		// 函数名 = function(形式参数列表){
+        //   函数体
+		// }
+
+		   function sum(a, b){
+			   // a和b都是局部变量,他们都是形参(a和b都是变量名，变量名随意。)
+			   alert(a + b);
+		   }
+
+		   sayHello = function(username){
+			   alert("hello " + username);
+		   }
+		   
+		   // 调用函数
+		   sayHello("zhangsan");
+		   
+		</script>
+		
+		<input type="button" value="hello" onclick="sayHello('张三');" /> 
+		<input type="button" value="计算10和20的求和" onclick="sum(10, 20);" />
+		
+	</body>
+</html>
